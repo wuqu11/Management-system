@@ -1,0 +1,40 @@
+<template>
+    <div>
+        <el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose"
+            :collapse="isCollapse">
+            <el-menu-item index="2">
+                <i class="el-icon-menu"></i>
+                <span slot="title">导航二</span>
+            </el-menu-item>
+            <el-submenu index="1">
+                <template slot="title">
+                    <i class="el-icon-location"></i>
+                    <span slot="title">导航一</span>
+                </template>
+            </el-submenu>
+            
+        </el-menu>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+      return {
+        isCollapse: false,
+        menu
+      };
+    },
+    methods: {
+      handleOpen(key, keyPath) {
+        console.log(key, keyPath);
+      },
+      handleClose(key, keyPath) {
+        console.log(key, keyPath);
+      }
+    }
+}
+</script>
+
+<style scoped>
+</style>
